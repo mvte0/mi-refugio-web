@@ -25,10 +25,10 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
 DEBUG = env("DEBUG", default=False)
 SECRET_KEY = env("SECRET_KEY", default="django-insecure-uoer87vu*-unues@)*1l#jcn*wete2kf%pv^t-f8uel#e35^2l")
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["mi-refugio-web.onrender.com"])
 CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[])
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-RECAPTCHA_SECRET = env("RECAPTCHA_SECRET", default="")
+RECAPTCHA_SECRET = env("6LcD1-4rAAAAAOXwu0pfD94gCp3xOQrVwO7AWxCo", default="")
 
 
 # Application definition
