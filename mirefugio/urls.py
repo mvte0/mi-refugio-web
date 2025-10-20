@@ -21,7 +21,7 @@ from core.views import landing, api_sugerencias
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", landing, name="home"),
-    path("api/sugerencias/", api_sugerencias, name="api_sugerencias"),
-    path("", include("payments.urls")),   # donaciones
+    path("", include("core.urls")),       # raíz y API de contacto
+    path("", include("payments.urls")),   # donaciones Webpay
 ]
 
