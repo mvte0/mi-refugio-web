@@ -1,0 +1,86 @@
+:root{
+      --mr-blue:#1e40af;   /* azul */
+      --mr-sky:#60a5fa;    /* celeste */
+      --mr-sky-2:#dbeafe;  /* celeste claro */
+      --mr-ink:#0f172a;    /* texto fuerte */
+    }
+
+html,body{height:100%;}
+body{background:linear-gradient(180deg, #ffffff 0%, var(--mr-sky-2) 100%);}
+.navbar{box-shadow:0 6px 20px rgba(2,6,23,.08)}
+.btn-mr{background:var(--mr-blue); color:#fff}
+.btn-mr:hover{background:#17348a; color:#fff}
+.btn-outline-mr{border-color:var(--mr-blue); color:var(--mr-blue)}
+.btn-outline-mr:hover{background:var(--mr-blue); color:#fff}
+.shadow-soft{box-shadow:0 12px 30px rgba(2,6,23,.08)}
+.badge-step{display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:.75rem; background:#fff; border:2px solid var(--mr-blue); color:var(--mr-blue); font-weight:800;}
+.section-title{color:var(--mr-blue)}
+.brand-logo{width:42px; height:42px; object-fit:contain}
+.avatar{width:96px; height:96px; object-fit:cover; border-radius:50%; border:2px solid rgba(15,23,42,.1)}
+.gov-logo{max-height:52px; object-fit:contain}
+.card-emg h5{color:var(--mr-blue)}
+footer{background:#fff}
+
+/* Hero gradient */
+.bg-gradient{
+  background: linear-gradient(180deg, #ffffff 0%, #f2f7ff 100%);
+}
+
+/* Emergencias look */
+#emergencias .card{ border-radius:1rem; }
+#emergencias .card-title{ color:#1849d6; } /* tono azul institucional */
+#emergencias .p-4.p-md-5{ background: #f7fbff; }
+
+/* Mejoras generales */
+section .container, #emergencias .container{ max-width: 1080px; }
+.rounded-4{ border-radius:1rem!important; }
+/* cajas de formularios similares a emergencias */
+#preguntas .bg-white, #donar .bg-white { background: #fff; }
+#preguntas .container, #donar .container { max-width: 980px; }
+
+/* ===== LAYOUT & DECOR ===== */
+.section-box{
+  background:#fff;
+  border-radius:1rem;
+  box-shadow:0 12px 28px rgba(16,24,40,.08);
+  padding:2rem 1.5rem;
+}
+@media (min-width: 768px){
+  .section-box{ padding:2.5rem 2rem; }
+}
+
+.section-title{
+  color:#1849d6;
+  font-weight:700;
+  margin-bottom:1rem;
+}
+.section-title em{ font-style: italic; }
+
+/* Feature compact cards */
+.feature-card{
+  background:#fff;
+  border-radius:.85rem;
+  box-shadow:0 6px 18px rgba(16,24,40,.06);
+  padding:1rem 1.25rem;
+  height:100%;
+}
+
+/* Steps with numbered badges */
+.step{
+  display:flex;
+  align-items:flex-start;
+  gap:.9rem;
+}
+.step .num{
+  flex:0 0 36px;
+  width:36px; height:36px;
+  display:inline-flex; align-items:center; justify-content:center;
+  border:2px solid #2f6ccc;
+  color:#2f6ccc;
+  border-radius:.75rem;
+  font-weight:700;
+  line-height:1;
+}
+
+/* Subtle section backdrop like screenshot */
+body{ background: #f2f6ff; }

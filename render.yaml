@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: mi-refugio
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn mirefugio.wsgi --log-file -
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12
+      - key: DJANGO_SETTINGS_MODULE
+        value: mirefugio.settings
+      - key: DEBUG
+        value: false
+      - key: ALLOWED_HOSTS
+        # Render te dará un dominio, por ejemplo mi-refugio.onrender.com
+        value: mi-refugio.onrender.com
+      - key: CSRF_TRUSTED_ORIGINS
+        # Debe llevar esquema https://
+        value: https://mi-refugio.onrender.com
+      - key: TBK_ENV
+        value: integration
+      - key: TBK_API_KEY_ID
+        value: 597055555532
+      - key: TBK_API_KEY_SECRET
+        value: 579B532A7440BB0C9079DED94D31EA1615BACEB56610332264630D42D0A36B1C
+      - key: TBK_RETURN_URL
+        # Ajusta cuando conozcas tu dominio final
+        value: https://mi-refugio.onrender.com/pagos/retorno/
+      - key: RECAPTCHA_SECRET
+        sync: false
+    autoDeploy: true
+databases:
+  - name: mirefugio-db

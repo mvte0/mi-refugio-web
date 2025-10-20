@@ -1,0 +1,393 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- 1) SLIDE / HERO -->
+<section id="hero" class="py-5 bg-light border-bottom">
+  <div class="container">
+    <div id="mrCarousel" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mrCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#mrCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner rounded-4 shadow-sm overflow-hidden">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="p-5 text-center bg-gradient">
+            <img src="{% static 'img/logo.png' %}" class="d-block mx-auto mb-3" alt="Mi Refugio" style="height:96px;">
+            <h1 class="fw-bold mb-2">Mi Refugio</h1>
+            <p class="lead mb-4">Plataforma de bienestar emocional con recursos, acompañamiento y rutas de ayuda.</p>
+            <div class="d-flex justify-content-center gap-2">
+              <a class="btn btn-mr btn-lg" href="/#donar">Donar al proyecto</a>
+              <a class="btn btn-outline-mr btn-lg" href="/#que-es">Saber más</a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="p-5 text-center bg-white">
+            <h2 class="fw-semibold">Cuidarte también es un plan</h2>
+            <p class="lead mb-4">Diario emocional, ejercicios de respiración, números de emergencia y más.</p>
+            <a class="btn btn-outline-mr btn-lg" href="/#incluye">Ver qué incluye</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#mrCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mrCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- 2) ¿QUÉ ES MI REFUGIO? -->
+<section id="que-es" class="py-4">
+      <div class="container">
+        <div class="card shadow-soft border-0">
+          <div class="card-body p-4 p-md-5">
+            <h2 class="section-title mb-3">¿Qué es <em>Mi Refugio</em>?</h2>
+            <p class="mb-0 text-secondary">Proyecto universitario orientado a <strong>apoyo y educación emocional</strong> en Chile. Promueve un espacio <strong>seguro, accesible y empático</strong> con enfoque de privacidad por diseño y accesibilidad.</p>
+          </div>
+        </div>
+      </div>
+</section>
+
+<!-- 3) CÓMO USAR LA APP -->
+<section id="como-usar" class="py-4">
+      <div class="container">
+        <div class="card shadow-soft border-0">
+          <div class="card-body p-4 p-md-5">
+            <h2 class="section-title mb-4">¿Cómo usar la APP?</h2>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="d-flex gap-3">
+                  <span class="badge-step">1</span>
+                  <div>
+                    <h5 class="mb-1">Descarga la app</h5>
+                    <ul class="text-secondary mb-0">
+                      <li>Disponible en Google Play y App Store.</li>
+                      <li>También puedes escanear el código QR.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex gap-3">
+                  <span class="badge-step">2</span>
+                  <div>
+                    <h5 class="mb-1">Crea tu perfil</h5>
+                    <ul class="text-secondary mb-0">
+                      <li>Regístrate con correo o cuenta social.</li>
+                      <li>Tus datos son privados y están bajo tu control.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex gap-3">
+                  <span class="badge-step">3</span>
+                  <div>
+                    <h5 class="mb-1">Registra tu estado emocional</h5>
+                    <ul class="text-secondary mb-0">
+                      <li>Elige emociones y agrega notas para más precisión.</li>
+                      <li>Visualiza tu historial y patrones.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex gap-3">
+                  <span class="badge-step">4</span>
+                  <div>
+                    <h5 class="mb-1">Recibe apoyo y sugerencias</h5>
+                    <ul class="text-secondary mb-0">
+                      <li>Ejercicios breves de mindfulness.</li>
+                      <li>Consejos personalizados.</li>
+                      <li>Chatbot de contención (no terapia).</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- row -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- 4) QUÉ INCLUYE LA APP -->
+<section id="incluye" class="py-4">
+      <div class="container">
+        <h2 class="section-title mb-3">¿Qué incluye la app?</h2>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-soft border-0">
+              <div class="card-body">
+                <h5 class="card-title">Diario emocional</h5>
+                <p class="card-text text-secondary">Registra estados, notas y observa tu progreso con visualizaciones simples.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-soft border-0">
+              <div class="card-body">
+                <h5 class="card-title">Chatbot de apoyo</h5>
+                <p class="card-text text-secondary">Contención inicial con mensajes claros de alcance y derivación.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-soft border-0">
+              <div class="card-body">
+                <h5 class="card-title">Mindfulness y respiración</h5>
+                <p class="card-text text-secondary">Rutinas cortas para bajar la ansiedad y reconectar con el presente.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-soft border-0">
+              <div class="card-body">
+                <h5 class="card-title">Recursos y redes de ayuda</h5>
+                <p class="card-text text-secondary">Directorio confiable de líneas de apoyo y organizaciones.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-soft border-0">
+              <div class="card-body">
+                <h5 class="card-title">Privacidad por diseño</h5>
+                <p class="card-text text-secondary">Permisos mínimos, cifrado y control del usuario sobre sus datos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-soft border-0">
+              <div class="card-body">
+                <h5 class="card-title">Recomendaciones con IA</h5>
+                <p class="card-text text-secondary">Sugerencias de hábitos y actividades según tus registros.</p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- row -->
+      </div>
+</section>
+
+<!-- 5) QUIÉNES SOMOS -->
+<section id="equipo" class="py-4">
+      <div class="container">
+        <h2 class="section-title mb-3">¿Quiénes somos?</h2>
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-3">
+            <div class="card text-center shadow-soft border-0">
+              <div class="card-body">
+                <img class="avatar mb-2" src="{% static 'img/mateo.jpg' %}" alt="Mateo Flores">
+                <h6 class="mb-0">Mateo Flores</h6>
+                <small class="text-secondary">Jefe de Proyecto</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card text-center shadow-soft border-0">
+              <div class="card-body">
+                <img class="avatar mb-2" src="{% static 'img/pierre.jpg' %}" alt="Pierre Salas">
+                <h6 class="mb-0">Pierre Salas</h6>
+                <small class="text-secondary">Jefe de Desarrollo</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card text-center shadow-soft border-0">
+              <div class="card-body">
+                <img class="avatar mb-2" src="{% static 'img/matias.png' %}" alt="Matías Rubilar">
+                <h6 class="mb-0">Matías Rubilar</h6>
+                <small class="text-secondary">Analista de Calidad</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card text-center shadow-soft border-0">
+              <div class="card-body">
+                <img class="avatar mb-2" src="{% static 'img/isaias.jpg' %}" alt="Isaias Veloz">
+                <h6 class="mb-0">Isaias Veloz</h6>
+                <small class="text-secondary">Arquitecto de Software</small>
+              </div>
+            </div>
+          </div>
+        </div> <!-- row -->
+      </div>
+    </section>
+
+<!-- 6) EMERGENCIAS PSICOLÓGICAS (CHILE) -->
+<section id="emergencias" class="py-5">
+  <div class="container">
+    <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm">
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <img src="{% static 'img/MINSAL.png' %}" alt="Gobierno de Chile" height="40" loading="lazy">
+        <h2 class="m-0">Emergencias psicológicas en Chile</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><strong>*4141 — Prevención del suicidio</strong></h5>
+              <p class="mb-0">“No estás solo, no estás sola”. Atención <strong>24/7</strong>, gratuita y confidencial por profesionales.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><strong>600 360 7777 — Salud Responde (MINSAL)</strong></h5>
+              <p class="mb-0">Orientación de salud <strong>24/7</strong> y derivación a la red pública cuando corresponda.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><strong>1455 — Violencias de género (Sernameg)</strong></h5>
+              <p class="mb-0">Atención gratuita para víctimas o testigos. <strong>08:00–24:00</strong> todos los días.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Emergencias generales</strong></h5>
+              <p class="mb-0"><strong>131</strong> SAMU · <strong>132</strong> Bomberos · <strong>133</strong> Carabineros · <strong>134</strong> PDI.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><strong>800 200 818 — Fono Infancia</strong></h5>
+              <p class="mb-0">Apoyo psicológico en crianza de niñas, niños y adolescentes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-muted small mt-4">
+        Aviso: Mi Refugio ofrece contención y educación. <strong>No reemplaza</strong> atención psicológica o médica.
+        En riesgo inminente, llama al <strong>131</strong> o acude a urgencias.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 7) ENLACES DE DESCARGA -->
+    <section id="descargas" class="py-4">
+      <div class="container">
+        <div class="card shadow-soft border-0">
+          <div class="card-body p-4">
+            <h2 class="section-title mb-3">Descarga la app</h2>
+            <p class="text-secondary">Próximamente en tiendas.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-outline-mr" href="#" target="_blank" rel="noopener">Google Play</a>
+              <a class="btn btn-outline-mr" href="#" target="_blank" rel="noopener">App Store</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- 8) FORMULARIO PREGUNTAS / SUGERENCIAS -->
+<section id="preguntas" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Preguntas y sugerencias</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm">
+          <form method="post" action="/api/sugerencias/" class="row g-3">
+            {% csrf_token %}
+             <div class="col-md-6">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" required placeholder="Tu nombre">
+                <div class="invalid-feedback">Ingresa tu nombre.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="email" name="email" required placeholder="tu@correo.com">
+                <div class="invalid-feedback">Ingresa un correo válido.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="type" class="form-label">Tipo</label>
+                <select id="type" name="type" class="form-select" required>
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option value="pregunta">Pregunta</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="otro">Otro</option>
+                </select>
+                <div class="invalid-feedback">Selecciona el tipo de mensaje.</div>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea id="message" name="message" class="form-control" rows="5" minlength="10" maxlength="1000" required placeholder="Cuéntanos en qué te podemos ayudar"></textarea>
+                <div class="form-text">Mínimo 10 caracteres.</div>
+                <div class="invalid-feedback">Ingresa un mensaje (≥ 10 caracteres).</div>
+              </div>
+              <!-- reCAPTCHA v2 (checkbox) -->
+              <div class="col-12">
+                <div class="g-recaptcha" data-sitekey="6LcD1-4rAAAAAIoUKKKFBxKzTZW0BM_OpQM3GEtp"></div>
+                <div class="form-text">Protegido por reCAPTCHA.</div>
+              </div>
+              <div class="col-12 d-flex gap-2">
+                <button type="submit" class="btn btn-mr">Enviar</button>
+                <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+              </div>
+          </form>
+          <div class="form-text mt-2">Tu información se almacenará de forma segura en nuestra base de datos.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9) FORM DONACIONES (Webpay) -->
+<section id="donar" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Apoya Mi Refugio</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm">
+          <form method="post" action="/donar/" class="row g-3">
+            {% csrf_token %}
+            <div class="col-12">
+              <label class="form-label">Monto (CLP)</label>
+              <input name="amount" type="number" min="500" step="1" class="form-control" placeholder="Ej: 3000" required>
+              <div class="form-text">Mínimo $500</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Nombre (opcional)</label>
+              <input name="name" type="text" maxlength="120" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email (opcional)</label>
+              <input name="email" type="email" class="form-control">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Mensaje (opcional)</label>
+              <textarea name="message" rows="3" class="form-control"></textarea>
+            </div>
+            <div class="col-12 d-flex justify-content-end">
+              <button class="btn btn-primary btn-lg">Donar con Webpay</button>
+            </div>
+          </form>
+          <p class="small text-muted mt-2 mb-0">Las donaciones se usan para mejorar la app, mantener servidores y crear nuevos contenidos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
