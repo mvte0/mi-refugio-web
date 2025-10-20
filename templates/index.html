@@ -302,15 +302,16 @@
     </section>
 
 <!-- 8) FORMULARIO PREGUNTAS / SUGERENCIAS -->
-<section id="preguntas" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Preguntas y sugerencias</h2>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm">
-          <form method="post" action="/api/sugerencias/" class="row g-3">
-            {% csrf_token %}
-             <div class="col-md-6">
+<section id="contacto" class="py-4">
+      <div class="container" style="max-width: 960px;">
+        <div class="card shadow-soft border-0">
+          <div class="card-body p-4">
+            <h2 class="section-title mb-3">Preguntas y sugerencias</h2>
+            <!-- ALERTAS -->
+            <div id="form-alert" class="d-none"></div>
+            <!-- FORM -->
+            <form id="form_contac" class="row g-3" method="POST" action="https://formspree.io/f/xzzjvnva" novalidate>
+              <div class="col-md-6">
                 <label for="name" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="name" name="name" required placeholder="Tu nombre">
                 <div class="invalid-feedback">Ingresa tu nombre.</div>
@@ -343,15 +344,13 @@
               </div>
               <div class="col-12 d-flex gap-2">
                 <button type="submit" class="btn btn-mr">Enviar</button>
-                <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+                <button type="reset" class="btn btn-outline-secondary">Cancelar</button>
               </div>
-          </form>
-          <div class="form-text mt-2">Tu información se almacenará de forma segura en nuestra base de datos.</div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 <!-- 9) FORM DONACIONES (Webpay) -->
 <section id="donar" class="py-5">
@@ -380,7 +379,7 @@
               <textarea name="message" rows="3" class="form-control"></textarea>
             </div>
             <div class="col-12 d-flex justify-content-end">
-              <button class="btn btn-primary btn-lg">Donar con Webpay</button>
+              <button class="btn btn-mr">Donar con Webpay</button>
             </div>
           </form>
           <p class="small text-muted mt-2 mb-0">Las donaciones se usan para mejorar la app, mantener servidores y crear nuevos contenidos.</p>
