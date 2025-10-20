@@ -303,62 +303,74 @@
 
 <!-- 8) FORMULARIO PREGUNTAS / SUGERENCIAS -->
 <section id="contacto" class="py-4">
-      <div class="container" style="max-width: 960px;">
-        <div class="card shadow-soft border-0">
-          <div class="card-body p-4">
-            <h2 class="section-title mb-3">Preguntas y sugerencias</h2>
-            <!-- ALERTAS -->
-            <div id="form-alert" class="d-none"></div>
-            <!-- FORM -->
-            <form id="form_contac" class="row g-3" method="POST" action="https://formspree.io/f/xzzjvnva" novalidate>
-              <div class="col-md-6">
-                <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="name" name="name" required placeholder="Tu nombre">
-                <div class="invalid-feedback">Ingresa tu nombre.</div>
-              </div>
-              <div class="col-md-6">
-                <label for="email" class="form-label">Correo</label>
-                <input type="email" class="form-control" id="email" name="email" required placeholder="tu@correo.com">
-                <div class="invalid-feedback">Ingresa un correo válido.</div>
-              </div>
-              <div class="col-md-6">
-                <label for="type" class="form-label">Tipo</label>
-                <select id="type" name="type" class="form-select" required>
-                <option value="" selected disabled>Selecciona una opción</option>
-                <option value="pregunta">Pregunta</option>
-                <option value="sugerencia">Sugerencia</option>
-                <option value="otro">Otro</option>
-                </select>
-                <div class="invalid-feedback">Selecciona el tipo de mensaje.</div>
-              </div>
-              <div class="col-12">
-                <label for="message" class="form-label">Mensaje</label>
-                <textarea id="message" name="message" class="form-control" rows="5" minlength="10" maxlength="1000" required placeholder="Cuéntanos en qué te podemos ayudar"></textarea>
-                <div class="form-text">Mínimo 10 caracteres.</div>
-                <div class="invalid-feedback">Ingresa un mensaje (≥ 10 caracteres).</div>
-              </div>
-              <!-- reCAPTCHA v2 (checkbox) -->
-              <div class="col-12">
-                <div class="g-recaptcha" data-sitekey="6LcD1-4rAAAAAIoUKKKFBxKzTZW0BM_OpQM3GEtp"></div>
-                <div class="form-text">Protegido por reCAPTCHA.</div>
-              </div>
-              <div class="col-12 d-flex gap-2">
-                <button type="submit" class="btn btn-mr">Enviar</button>
-                <button type="reset" class="btn btn-outline-secondary">Cancelar</button>
-              </div>
-            </form>
+  <div class="container" style="max-width: 960px;">
+    <div class="card shadow-soft border-0">
+      <div class="card-body p-4">
+        <h2 class="section-title mb-3">Preguntas y sugerencias</h2>
+
+        <!-- ALERTAS del backend (ya se renderizan en base.html). Puedes mantener este div si luego quieres JS adicional -->
+        <div id="form-alert" class="d-none"></div>
+
+        <!-- FORM: ahora va a tu endpoint Django -->
+        <form id="form_contac" class="row g-3" method="POST" action="/api/sugerencias/" novalidate>
+          {% csrf_token %}
+          <div class="col-md-6">
+            <label for="name" class="form-label">Nombre</label>
+            <!-- nombre del campo debe ser 'nombre' para que lo tome la vista -->
+            <input type="text" class="form-control" id="name" name="nombre" required placeholder="Tu nombre">
+            <div class="invalid-feedback">Ingresa tu nombre.</div>
           </div>
-        </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">Correo</label>
+            <!-- email ya coincide -->
+            <input type="email" class="form-control" id="email" name="email" required placeholder="tu@correo.com">
+            <div class="invalid-feedback">Ingresa un correo válido.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="type" class="form-label">Tipo</label>
+            <!-- este campo es opcional en el backend; se incrusta al mensaje -->
+            <select id="type" name="type" class="form-select">
+              <option value="" selected>General</option>
+              <option value="pregunta">Pregunta</option>
+              <option value="sugerencia">Sugerencia</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label for="message" class="form-label">Mensaje</label>
+            <!-- nombre del campo debe ser 'mensaje' para que lo tome la vista -->
+            <textarea id="message" name="mensaje" class="form-control" rows="5" minlength="10" maxlength="1000" required placeholder="Cuéntanos en qué te podemos ayudar"></textarea>
+            <div class="form-text">Mínimo 10 caracteres.</div>
+            <div class="invalid-feedback">Ingresa un mensaje (≥ 10 caracteres).</div>
+          </div>
+
+          <!-- reCAPTCHA v2 (checkbox) -->
+          <div class="col-12">
+            <div class="g-recaptcha" data-sitekey="6LcD1-4rAAAAAIoUKKKFBxKzTZW0BM_OpQM3GEtp"></div>
+            <div class="form-text">Protegido por reCAPTCHA.</div>
+          </div>
+
+          <div class="col-12 d-flex gap-2">
+            <button type="submit" class="btn btn-mr">Enviar</button>
+            <button type="reset" class="btn btn-outline-secondary">Cancelar</button>
+          </div>
+        </form>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 
 <!-- 9) FORM DONACIONES (Webpay) -->
 <section id="donar" class="py-5">
   <div class="container">
     <div class="row justify-content-center">
-      <h2 class="section-title mb-3">Apoya Mi Refugio</h2>
       <div class="col-lg-7">
         <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm">
+          <h2 class="section-title mb-3">Apoya Mi Refugio</h2>
           <form method="post" action="/donar/" class="row g-3">
             {% csrf_token %}
             <div class="col-12">
