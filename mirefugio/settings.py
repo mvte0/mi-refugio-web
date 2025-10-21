@@ -29,6 +29,7 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["mi-refugio-web.onrender.com"
 CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[])
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 RECAPTCHA_SECRET = env("6LcD1-4rAAAAAOXwu0pfD94gCp3xOQrVwO7AWxCo", default="")
+CONTACT_BYPASS_RECAPTCHA = env.bool("CONTACT_BYPASS_RECAPTCHA", default=False)
 
 
 # Application definition
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'mirefugio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {"default": env.db(default="postgres://mi_refugio_user:AdminMiRefugio2025!@localhost:5432/mirefugio")}
+DATABASES = {"default": env.db(default="postgresql://mi_refugio_user:W0Xt6tA8CCSF0RLwxnW7fSWLWANohcda@dpg-d3qrlvripnbc73aomoqg-a@localhost:5432/mirefugio")}
 
 
 # Password validation

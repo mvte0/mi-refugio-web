@@ -5,10 +5,13 @@ from django.contrib import messages
 from django.http import HttpResponseBadRequest
 import requests
 from .models import Sugerencia
+import os, logging
 
 def landing(request):
     # Render de la landing
     return render(request, "index.html")
+
+logger = logging.getLogger(__name__)
 
 def api_sugerencias(request):
     if request.method != "POST":
@@ -20,20 +23,30 @@ def api_sugerencias(request):
     tipo    = (request.POST.get("type")   or "").strip()
     token   = request.POST.get("g-recaptcha-response", "")
 
-    if not (nombre and email and mensaje and token):
-        messages.error(request, "Faltan datos o reCAPTCHA.")
+    if not (nombre and email and mensaje):
+        messages.error(request, "Faltan datos obligatorios.")
         return redirect("/#contacto")
 
-    # Validación reCAPTCHA
-    try:
-        r = requests.post(
-            "https://www.google.com/recaptcha/api/siteverify",
-            data={"secret": settings.RECAPTCHA_SECRET, "response": token},
-            timeout=8
-        )
-        ok = r.json().get("success", False)
-    except Exception:
-        ok = False
+    # Bypass temporal (para probar en Render)
+    bypass = getattr(settings, "CONTACT_BYPASS_RECAPTCHA", False) or os.environ.get("CONTACT_BYPASS_RECAPTCHA") == "1"
+
+    ok = True
+    if not bypass:
+        if not token:
+            messages.error(request, "Falta reCAPTCHA.")
+            return redirect("/#contacto")
+        try:
+            r = requests.post(
+                "https://www.google.com/recaptcha/api/siteverify",
+                data={"secret": settings.RECAPTCHA_SECRET, "response": token},
+                timeout=8
+            )
+            resp = r.json()
+            ok = resp.get("success", False)
+            logger.info("reCAPTCHA resp: %s", resp)
+        except Exception as e:
+            logger.exception("Error validando reCAPTCHA")
+            ok = False
 
     if not ok:
         messages.error(request, "No pudimos validar el reCAPTCHA. Intenta nuevamente.")
@@ -42,6 +55,8 @@ def api_sugerencias(request):
     if tipo:
         mensaje = f"[{tipo.upper()}] {mensaje}"
 
-    Sugerencia.objects.create(nombre=nombre, email=email, mensaje=mensaje)
+    obj = Sugerencia.objects.create(nombre=nombre, email=email, mensaje=mensaje)
+    logger.info("Sugerencia guardada id=%s", obj.id)
+
     messages.success(request, "¡Gracias! Recibimos tu mensaje.")
     return redirect("/#contacto")
