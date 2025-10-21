@@ -28,7 +28,6 @@ SECRET_KEY = env("SECRET_KEY", default="django-insecure-uoer87vu*-unues@)*1l#jcn
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["mi-refugio-web.onrender.com"])
 CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[])
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-RECAPTCHA_SECRET = env("6LcD1-4rAAAAAOXwu0pfD94gCp3xOQrVwO7AWxCo", default="")
 CONTACT_BYPASS_RECAPTCHA = env.bool("CONTACT_BYPASS_RECAPTCHA", default=False)
 
 
