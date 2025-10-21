@@ -73,12 +73,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mirefugio.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-DATABASES = {"default": env.db(default="postgresql://mi_refugio_user:W0Xt6tA8CCSF0RLwxnW7fSWLWANohcda@dpg-d3qrlvripnbc73aomoqg-a@localhost:5432/mirefugio")}
-
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "mirefugio",                 # nombre de la BD local
+        "USER": "mi_refugio_user",           # usuario local
+        "PASSWORD": "AdminMiRefugio2025!",   # clave de ese usuario
+        "HOST": "localhost",                 # tu máquina
+        "PORT": "5432",                      # puerto por defecto
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
