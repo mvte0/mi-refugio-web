@@ -137,3 +137,8 @@ TBK_API_KEY_ID     = env("TBK_API_KEY_ID", default="597055555532")
 TBK_API_KEY_SECRET = env("TBK_API_KEY_SECRET", default="579B532A7440BB0C9079DED94D31EA1615BACEB56610332264630D42D0A36B1C")
 TBK_ENV            = env("TBK_ENV", default="integration")  # integration | production
 TBK_RETURN_URL     = env("TBK_RETURN_URL", default="http://localhost:8000/pagos/retorno/")
+
+# Auth redirects
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+LOGIN_URL = "login"

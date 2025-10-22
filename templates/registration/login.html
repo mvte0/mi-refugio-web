@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5" style="max-width: 480px;">
+  <h1 class="h3 mb-4">Ingresar</h1>
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="checkbox" id="remember" name="remember">
+      <label class="form-check-label" for="remember">Recordarme por 30 días</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Entrar</button>
+  </form>
+</div>
+{% endblock %}
+

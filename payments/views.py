@@ -1,7 +1,8 @@
-import uuid, decimal
+﻿import uuid, decimal
 from django.conf import settings
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_protect
+from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.http import HttpResponseBadRequest
 from .models import Donation
@@ -20,19 +21,21 @@ except ImportError:
     from transbank.common import Options, IntegrationCommerceCodes, IntegrationApiKeys, IntegrationType
 # ==========================================================================
 def webpay_init(request):
-    # Alias que reusa el POST del formulario de donación
+    # Alias que reusa el POST del formulario de donaciÃ³n
     if request.method == "POST":
         return donate_form(request)
-    # Si llegan por GET, muéstrales el form para que indiquen monto y datos
+    # Si llegan por GET, muÃ©strales el form para que indiquen monto y datos
     return render(request, "donations/form.html")
 
 def _tbk_options():
-    if settings.TBK_ENV == "production":
+    """Configura el SDK según ambiente y credenciales."""
+    if getattr(settings, 'TBK_ENV', 'integration') == "production":
         return Options(settings.TBK_API_KEY_ID, settings.TBK_API_KEY_SECRET, IntegrationType.LIVE)
     # integración (sandbox)
     return Options(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, IntegrationType.TEST)
 
 @csrf_protect
+@login_required(login_url='login')
 def donate_form(request):
     if request.method == "GET":
         return render(request, "donations/form.html")
@@ -40,10 +43,10 @@ def donate_form(request):
     try:
         amount = decimal.Decimal(request.POST.get("amount", "0")).quantize(decimal.Decimal("1."))
     except Exception:
-        return HttpResponseBadRequest("Monto inválido")
+        return HttpResponseBadRequest("Monto invÃ¡lido")
 
     if amount < 500:
-        return HttpResponseBadRequest("El monto mínimo es $500")
+        return HttpResponseBadRequest("El monto mÃ­nimo es $500")
 
     name = request.POST.get("name", "")
     email = request.POST.get("email", "")
@@ -52,13 +55,16 @@ def donate_form(request):
     buy_order = f"MR-{timezone.now().strftime('%Y%m%d%H%M%S')}-{uuid.uuid4().hex[:6]}"
     session_id = uuid.uuid4().hex[:12]
 
+    # Asociar cliente si existe
+    cliente = getattr(getattr(request.user, 'cliente', None), 'id', None)
     donation = Donation.objects.create(
+        cliente=request.user.cliente if hasattr(request.user, 'cliente') else None,
         amount=amount, name=name, email=email, message=message,
         buy_order=buy_order, session_id=session_id
     )
 
     tx = Transaction(_tbk_options())
-    resp = tx.create(buy_order, session_id, settings.TBK_RETURN_URL, int(amount))
+    resp = tx.create(buy_order, session_id, int(amount), settings.TBK_RETURN_URL)
     token = resp.get("token")
     url = resp.get("url")
     donation.token_ws = token
@@ -72,7 +78,7 @@ def webpay_return(request):
     tbk_orden_compra = request.POST.get("TBK_ORDEN_COMPRA")
     tbk_id_sesion = request.POST.get("TBK_ID_SESION")
 
-    # Aborto/cancelación
+    # Aborto/cancelaciÃ³n
     if tbk_token or tbk_orden_compra or tbk_id_sesion:
         if tbk_orden_compra:
             Donation.objects.filter(buy_order=tbk_orden_compra).update(status="aborted")
@@ -96,3 +102,33 @@ def webpay_return(request):
         response_raw=result
     )
     return render(request, "donations/result.html", {"ok": ok, "result": result})
+
+# --- Ajuste SDK: asegurar Options concretas en integración (SDK 6.x usa WebpayOptions) ---
+try:
+    from transbank.common.options import WebpayOptions as _TBKOptions
+except Exception:
+    try:
+        from transbank.common.options import Options as _TBKOptions
+    except Exception:
+        from transbank.common import Options as _TBKOptions
+
+def _tbk_options():
+    if getattr(settings, 'TBK_ENV', 'integration') == 'production':
+        return _TBKOptions(settings.TBK_API_KEY_ID, settings.TBK_API_KEY_SECRET, IntegrationType.LIVE)
+    # Integración por defecto con códigos/keys del SDK
+    return _TBKOptions(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, IntegrationType.TEST)
+
+
+
+def webpay_status(request):
+    token = request.GET.get("token")
+    if not token:
+        return HttpResponseBadRequest("Falta token")
+    tx = Transaction(_tbk_options())
+    try:
+        data = tx.status(token)
+        from django.http import JsonResponse
+        return JsonResponse(data)
+    except Exception as e:
+        from django.http import JsonResponse
+        return JsonResponse({"error": str(e)}, status=400)

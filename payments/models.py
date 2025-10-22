@@ -1,7 +1,13 @@
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 class Donation(models.Model):
+    # Enlaza la donación al cliente autenticado que la inicia
+    # (nullable para compatibilidad con registros existentes)
+    from django.apps import apps
+    # Referencia diferida a evitar import circular
+    cliente = models.ForeignKey('core.Cliente', null=True, blank=True, on_delete=models.SET_NULL, related_name='donations')
     created_at = models.DateTimeField(auto_now_add=True)
     amount = models.DecimalField(max_digits=12, decimal_places=2)
     name = models.CharField(max_length=120, blank=True)
