@@ -17,11 +17,8 @@ import environ
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Env
-env = environ.Env(
-    DEBUG=(bool, False),
-)
-environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 DEBUG = env("DEBUG", default=False)
 SECRET_KEY = env("SECRET_KEY", default="django-insecure-uoer87vu*-unues@)*1l#jcn*wete2kf%pv^t-f8uel#e35^2l")
@@ -78,10 +75,10 @@ WSGI_APPLICATION = 'mirefugio.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("DB_NAME", "db-mirefugio"),
+        "NAME": os.environ.get("DB_NAME", "mirefugio"),
         "USER": os.environ.get("DB_USER", "mirefugio_owner"),      # o el usuario que usarás
         "PASSWORD": os.environ.get("DB_PASS", "Mirefugio2025!"),             # guarda esto en env
-        "HOST": os.environ.get("DB_HOST", "db-mirefugio.c9ie2ckqg3rt.us-east-2.rds.amazonaws.com"),  # p.ej. db-mirefugio.xxxxx.rds.amazonaws.com
+        "HOST": os.environ.get("DB_HOST", "mirefugio.c9ie2ckqg3rt.us-east-2.rds.amazonaws.com"),  # p.ej. db-mirefugio.xxxxx.rds.amazonaws.com
         "PORT": os.environ.get("DB_PORT", "5432"),
         "OPTIONS": {"sslmode": "require"},
     }
@@ -120,7 +117,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
