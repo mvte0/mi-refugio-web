@@ -78,11 +78,12 @@ WSGI_APPLICATION = 'mirefugio.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "mirefugio",                 # nombre de la BD local
-        "USER": "mi_refugio_user",           # usuario local
-        "PASSWORD": "AdminMiRefugio2025!",   # clave de ese usuario
-        "HOST": "localhost",                 # tu máquina
-        "PORT": "5432",                      # puerto por defecto
+        "NAME": os.environ.get("DB_NAME", "db-mirefugio"),
+        "USER": os.environ.get("DB_USER", "mirefugio_owner"),      # o el usuario que usarás
+        "PASSWORD": os.environ.get("DB_PASS", "Mirefugio2025!"),             # guarda esto en env
+        "HOST": os.environ.get("DB_HOST", "db-mirefugio.c9ie2ckqg3rt.us-east-2.rds.amazonaws.com"),  # p.ej. db-mirefugio.xxxxx.rds.amazonaws.com
+        "PORT": os.environ.get("DB_PORT", "5432"),
+        "OPTIONS": {"sslmode": "require"},
     }
 }
 

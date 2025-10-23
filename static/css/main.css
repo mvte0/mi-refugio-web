@@ -7,7 +7,11 @@
 
 html,body{height:100%;}
 body{background:linear-gradient(180deg, #ffffff 0%, var(--mr-sky-2) 100%);}
-.navbar{box-shadow:0 6px 20px rgba(2,6,23,.08)}
+/* Enlaces del navbar */
+.navbar .nav-link { font-weight: 500; }
+.navbar .nav-link.active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+  color: #0d6efd;
+}
 .btn-mr{background:var(--mr-blue); color:#fff}
 .btn-mr:hover{background:#17348a; color:#fff}
 .btn-outline-mr{border-color:var(--mr-blue); color:var(--mr-blue)}
@@ -84,3 +88,18 @@ section .container, #emergencias .container{ max-width: 1080px; }
 
 /* Subtle section backdrop like screenshot */
 body{ background: #f2f6ff; }
+
+/* Tarjetas suaves */
+.card { border-radius: 1rem; }
+
+/* Mejora foco accesible */
+:focus-visible { outline: 3px solid #0d6efd; outline-offset: 2px; }
+
+/* Botones uniformes */
+.btn-primary {
+  --bs-btn-bg: #0d6efd;
+  --bs-btn-border-color: #0d6efd;
+  --bs-btn-hover-bg: #0b5ed7;
+  --bs-btn-hover-border-color: #0a58ca;
+}
+
