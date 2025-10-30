@@ -23,7 +23,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", landing, name="home"),
     path("", include("core.urls")),       # raíz y API de contacto
-    path("", include("payments.urls")),   # donaciones Webpay
+    path("donar/", include(("payments.urls", "payments"), namespace="payments")),   # donaciones Webpay
     path("accounts/login/", LoginViewRemember.as_view(template_name="registration/login.html"), name="login"),
     path("accounts/logout/", logout_then_home, name="logout"),
 ]

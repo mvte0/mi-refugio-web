@@ -1,33 +1,40 @@
 {% extends "base.html" %}
+{% block title %}Resultado de pago | Mi Refugio{% endblock %}
 {% block content %}
-<div class="container" style="max-width:720px">
-  {% if ok %}
-    <div class="alert alert-success">
-      <h4 class="alert-heading">¡Gracias por tu donación!</h4>
-      <p>Tu pago fue autorizado.</p>
+<section class="py-5">
+  <div class="container" style="max-width: 960px;">
+    <div class="card shadow-soft border-0">
+      <div class="card-body p-4 p-md-5">
+        {% if ok %}
+          <div class="alert alert-success">
+            <h4 class="alert-heading">¡Gracias por tu donación!</h4>
+            <p>Tu pago fue autorizado.</p>
+          </div>
+          {% if result %}
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Orden:</strong> {{ result.buy_order }}</li>
+              <li class="list-group-item"><strong>Código autorización:</strong> {{ result.authorization_code }}</li>
+              <li class="list-group-item"><strong>Monto:</strong> ${{ result.amount }}</li>
+              <li class="list-group-item"><strong>Método:</strong> {{ result.payment_type_code }}</li>
+            </ul>
+          {% endif %}
+        {% elif aborted %}
+          <div class="alert alert-warning">
+            <h4 class="alert-heading">Pago cancelado</h4>
+            <p>No se realizó el cobro. Puedes intentar nuevamente cuando quieras.</p>
+          </div>
+        {% else %}
+          <div class="alert alert-danger">
+            <h4 class="alert-heading">Pago rechazado</h4>
+            <p>No se pudo autorizar tu pago.</p>
+          </div>
+          {% if result %}
+            <pre class="bg-light p-3 rounded">{{ result|safe }}</pre>
+          {% endif %}
+        {% endif %}
+        <a href="{% url 'home' %}" class="btn btn-outline-secondary mt-3">Volver al inicio</a>
+      </div>
     </div>
-    {% if result %}
-      <ul class="list-group">
-        <li class="list-group-item"><strong>Orden:</strong> {{ result.buy_order }}</li>
-        <li class="list-group-item"><strong>Código autorización:</strong> {{ result.authorization_code }}</li>
-        <li class="list-group-item"><strong>Monto:</strong> ${{ result.amount }}</li>
-        <li class="list-group-item"><strong>Método:</strong> {{ result.payment_type_code }}</li>
-      </ul>
-    {% endif %}
-  {% elif aborted %}
-    <div class="alert alert-warning">
-      <h4 class="alert-heading">Pago cancelado</h4>
-      <p>No se realizó el cobro. Puedes intentar nuevamente cuando quieras.</p>
-    </div>
-  {% else %}
-    <div class="alert alert-danger">
-      <h4 class="alert-heading">Pago rechazado</h4>
-      <p>No se pudo autorizar tu pago.</p>
-    </div>
-    {% if result %}
-      <pre class="bg-light p-3 rounded">{{ result|safe }}</pre>
-    {% endif %}
-  {% endif %}
-  <a href="/" class="btn btn-outline-secondary mt-3">Volver al inicio</a>
-</div>
+  </div>
+</section>
 {% endblock %}

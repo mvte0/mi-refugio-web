@@ -1,8 +1,11 @@
 from django.urls import path
+
 from . import views
 
+app_name = "payments"
+
 urlpatterns = [
-    path("donar/", views.donate_form, name="donate_form"),
-    path("pagos/retorno/", views.webpay_return, name="webpay_return"),
-    path("pagos/estado/", views.webpay_status, name="webpay_status"),
+    path("", views.donation_form, name="crear"),
+    path("retorno/", views.webpay_return, name="webpay_return"),
+    path("estado/", views.webpay_status, name="webpay_status"),
 ]

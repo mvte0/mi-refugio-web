@@ -1,101 +1,74 @@
-:root{
-      --mr-blue:#1e40af;   /* azul */
-      --mr-sky:#60a5fa;    /* celeste */
-      --mr-sky-2:#dbeafe;  /* celeste claro */
-      --mr-ink:#0f172a;    /* texto fuerte */
-    }
+/* ============================================================
+   🎨 PALETA Y VARIABLES GLOBALES
+   ============================================================ */
+:root {
+  --mr-blue: #1e40af;    /* Azul principal */
+  --mr-sky: #60a5fa;     /* Celeste medio */
+  --mr-sky-2: #dbeafe;   /* Celeste claro */
+  --mr-ink: #0f172a;     /* Texto fuerte */
+}
 
-html,body{height:100%;}
-body{background:linear-gradient(180deg, #ffffff 0%, var(--mr-sky-2) 100%);}
-/* Enlaces del navbar */
-.navbar .nav-link { font-weight: 500; }
-.navbar .nav-link.active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+/* ============================================================
+   🧩 BASE Y LAYOUT GENERAL
+   ============================================================ */
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, #ffffff 0%, var(--mr-sky-2) 100%);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: var(--mr-ink);
+  margin: 0;
+}
+
+section .container,
+#emergencias .container {
+  max-width: 1080px;
+}
+
+/* Fondo alternativo sutil */
+body {
+  background: #f2f6ff;
+}
+
+/* ============================================================
+   🧭 NAVBAR
+   ============================================================ */
+.navbar .nav-link {
+  font-weight: 500;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
   color: #0d6efd;
 }
-.btn-mr{background:var(--mr-blue); color:#fff}
-.btn-mr:hover{background:#17348a; color:#fff}
-.btn-outline-mr{border-color:var(--mr-blue); color:var(--mr-blue)}
-.btn-outline-mr:hover{background:var(--mr-blue); color:#fff}
-.shadow-soft{box-shadow:0 12px 30px rgba(2,6,23,.08)}
-.badge-step{display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:.75rem; background:#fff; border:2px solid var(--mr-blue); color:var(--mr-blue); font-weight:800;}
-.section-title{color:var(--mr-blue)}
-.brand-logo{width:42px; height:42px; object-fit:contain}
-.avatar{width:96px; height:96px; object-fit:cover; border-radius:50%; border:2px solid rgba(15,23,42,.1)}
-.gov-logo{max-height:52px; object-fit:contain}
-.card-emg h5{color:var(--mr-blue)}
-footer{background:#fff}
 
-/* Hero gradient */
-.bg-gradient{
-  background: linear-gradient(180deg, #ffffff 0%, #f2f7ff 100%);
+/* ============================================================
+   🔘 BOTONES
+   ============================================================ */
+.btn-mr {
+  background: var(--mr-blue);
+  color: #fff;
 }
 
-/* Emergencias look */
-#emergencias .card{ border-radius:1rem; }
-#emergencias .card-title{ color:#1849d6; } /* tono azul institucional */
-#emergencias .p-4.p-md-5{ background: #f7fbff; }
-
-/* Mejoras generales */
-section .container, #emergencias .container{ max-width: 1080px; }
-.rounded-4{ border-radius:1rem!important; }
-/* cajas de formularios similares a emergencias */
-#preguntas .bg-white, #donar .bg-white { background: #fff; }
-#preguntas .container, #donar .container { max-width: 980px; }
-
-/* ===== LAYOUT & DECOR ===== */
-.section-box{
-  background:#fff;
-  border-radius:1rem;
-  box-shadow:0 12px 28px rgba(16,24,40,.08);
-  padding:2rem 1.5rem;
-}
-@media (min-width: 768px){
-  .section-box{ padding:2.5rem 2rem; }
+.btn-mr:hover {
+  background: #17348a;
+  color: #fff;
 }
 
-.section-title{
-  color:#1849d6;
-  font-weight:700;
-  margin-bottom:1rem;
-}
-.section-title em{ font-style: italic; }
-
-/* Feature compact cards */
-.feature-card{
-  background:#fff;
-  border-radius:.85rem;
-  box-shadow:0 6px 18px rgba(16,24,40,.06);
-  padding:1rem 1.25rem;
-  height:100%;
+.btn-outline-mr {
+  border-color: var(--mr-blue);
+  color: var(--mr-blue);
 }
 
-/* Steps with numbered badges */
-.step{
-  display:flex;
-  align-items:flex-start;
-  gap:.9rem;
-}
-.step .num{
-  flex:0 0 36px;
-  width:36px; height:36px;
-  display:inline-flex; align-items:center; justify-content:center;
-  border:2px solid #2f6ccc;
-  color:#2f6ccc;
-  border-radius:.75rem;
-  font-weight:700;
-  line-height:1;
+.btn-outline-mr:hover {
+  background: var(--mr-blue);
+  color: #fff;
 }
 
-/* Subtle section backdrop like screenshot */
-body{ background: #f2f6ff; }
-
-/* Tarjetas suaves */
-.card { border-radius: 1rem; }
-
-/* Mejora foco accesible */
-:focus-visible { outline: 3px solid #0d6efd; outline-offset: 2px; }
-
-/* Botones uniformes */
+/* Uniformidad Bootstrap */
 .btn-primary {
   --bs-btn-bg: #0d6efd;
   --bs-btn-border-color: #0d6efd;
@@ -103,3 +76,165 @@ body{ background: #f2f6ff; }
   --bs-btn-hover-border-color: #0a58ca;
 }
 
+/* ============================================================
+   📦 COMPONENTES GENERALES
+   ============================================================ */
+
+/* Sombra suave y esquinas redondeadas */
+.shadow-soft {
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.08);
+}
+
+.rounded-4 {
+  border-radius: 1rem !important;
+}
+
+/* Tarjetas */
+.card {
+  border-radius: 1rem;
+}
+
+/* ============================================================
+   🪶 DECORATIVOS Y ESTILOS DE SECCIÓN
+   ============================================================ */
+
+/* Hero gradient */
+.bg-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #f2f7ff 100%);
+}
+
+/* Sección genérica con caja blanca */
+.section-box {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.08);
+  padding: 2rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-box {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* Títulos de sección */
+.section-title {
+  color: var(--mr-blue);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-title em {
+  font-style: italic;
+}
+
+/* ============================================================
+   💡 FEATURES / INFOBOXES
+   ============================================================ */
+.feature-card {
+  background: #fff;
+  border-radius: 0.85rem;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  padding: 1rem 1.25rem;
+  height: 100%;
+}
+
+/* ============================================================
+   🚨 EMERGENCIAS
+   ============================================================ */
+#emergencias .card {
+  border-radius: 1rem;
+}
+
+#emergencias .card-title {
+  color: #1849d6;
+}
+
+#emergencias .p-4.p-md-5 {
+  background: #f7fbff;
+}
+
+/* ============================================================
+   💬 FORMULARIOS Y DONAR
+   ============================================================ */
+#preguntas .bg-white,
+#donar .bg-white {
+  background: #fff;
+}
+
+#preguntas .container,
+#donar .container {
+  max-width: 980px;
+}
+
+/* ============================================================
+   🧍‍♂️ ELEMENTOS ESPECIALES
+   ============================================================ */
+.badge-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 0.75rem;
+  background: #fff;
+  border: 2px solid var(--mr-blue);
+  color: var(--mr-blue);
+  font-weight: 800;
+}
+
+/* Pasos numerados */
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.step .num {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #2f6ccc;
+  color: #2f6ccc;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ============================================================
+   🖼️ LOGOS, AVATARES Y PIE DE PÁGINA
+   ============================================================ */
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(15, 23, 42, 0.1);
+}
+
+.gov-logo {
+  max-height: 52px;
+  object-fit: contain;
+}
+
+footer {
+  background: #fff;
+  color: var(--mr-ink);
+}
+
+/* ============================================================
+   ♿ ACCESIBILIDAD
+   ============================================================ */
+:focus-visible {
+  outline: 3px solid #0d6efd;
+  outline-offset: 2px;
+}

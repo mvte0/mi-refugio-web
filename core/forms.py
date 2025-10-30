@@ -1,12 +1,15 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .validators import normalize_rut
+
 from .models import Cliente
+from .validators import normalize_rut
 
 
 class RegisterForm(UserCreationForm):
-    email = forms.EmailField(required=True, label="Correo electrónico")
+    """Formulario de registro que exige RUT y correo unicos."""
+
+    email = forms.EmailField(required=True, label="Correo electronico")
     rut = forms.CharField(required=True, label="RUT", max_length=14)
 
     class Meta(UserCreationForm.Meta):
@@ -17,13 +20,13 @@ class RegisterForm(UserCreationForm):
         value = self.cleaned_data.get("rut")
         rut = normalize_rut(value)
         if Cliente.objects.filter(rut=rut).exists():
-            raise forms.ValidationError("Este RUT ya está registrado.")
+            raise forms.ValidationError("Este RUT ya esta registrado.")
         return rut
 
     def clean_email(self):
         email = (self.cleaned_data.get("email") or "").strip()
         if User.objects.filter(email__iexact=email).exists():
-            raise forms.ValidationError("Este correo ya está registrado.")
+            raise forms.ValidationError("Este correo ya esta registrado.")
         return email
 
     def save(self, commit=True):

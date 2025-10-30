@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Mi Cuenta | Mi Refugio{% endblock %}
+{% block content %}
+<section class="py-5">
+  <div class="container" style="max-width: 920px;">
+    <div class="row g-4">
+      <!-- Resumen -->
+      <div class="col-12 col-lg-4">
+        <div class="card shadow-soft border-0 h-100">
+          <div class="card-body p-4 text-center">
+            <img class="avatar mb-3" src="https://ui-avatars.com/api/?name={{ user.get_full_name|default:user.username|urlencode }}&background=1e40af&color=fff" alt="Avatar">
+            <h5 class="mb-1">{{ user.get_full_name|default:user.username }}</h5>
+            <div class="text-secondary small">{{ user.email }}</div>
+            <hr>
+            <a href="{% url 'password_change' %}" class="btn btn-outline-mr btn-sm">Cambiar contraseña</a>
+          </div>
+        </div>
+      </div>
+      <!-- Detalle / edición simple -->
+      <div class="col-12 col-lg-8">
+        <div class="card shadow-soft border-0 h-100">
+          <div class="card-body p-4">
+            <h2 class="h5 mb-3">Datos de la cuenta</h2>
+            <form method="post" action="{% url 'perfil' %}" class="row g-3">
+              {% csrf_token %}
+              <div class="col-md-6">
+                <label class="form-label">Nombre</label>
+                <input class="form-control" name="first_name" value="{{ user.first_name }}" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Apellido</label>
+                <input class="form-control" name="last_name" value="{{ user.last_name }}" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Correo</label>
+                <input type="email" class="form-control" value="{{ user.email }}" name="email" required>
+              </div>
+              <div class="col-12 d-flex gap-2">
+                <button class="btn btn-mr">Guardar cambios</button>
+                <a class="btn btn-outline-secondary" href="{% url 'home' %}">Volver</a>
+              </div>
+            </form>
+            <p class="small text-muted mt-3 mb-0">
+              * Esta es una edición simple. Para cambios críticos, valida tu correo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
