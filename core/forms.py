@@ -16,6 +16,12 @@ class RegisterForm(UserCreationForm):
         model = User
         fields = ("username", "email", "rut", "password1", "password2")
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for name, field in self.fields.items():
+            css_class = field.widget.attrs.get("class", "")
+            field.widget.attrs["class"] = f"{css_class} form-control".strip()
+
     def clean_rut(self):
         value = self.cleaned_data.get("rut")
         rut = normalize_rut(value)
