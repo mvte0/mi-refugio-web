@@ -55,14 +55,6 @@
   </div>
 </nav>
 
-{% if messages %}
-  <div class="container pt-3">
-    {% for message in messages %}
-      <div class="alert alert-{{ message.tags }} mb-2">{{ message }}</div>
-    {% endfor %}
-  </div>
-{% endif %}
-
 <main class="pt-5 mt-4">{% block content %}{% endblock %}</main>
 
 <footer class="border-top mt-5">
@@ -83,5 +75,43 @@
 <script src="{% static 'js/main.js' %}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% if messages %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof Swal === "undefined") {
+      return;
+    }
+    const alerts = [
+      {% for message in messages %}
+        {
+          level: "{{ message.tags|default:'info' }}",
+          text: "{{ message|escapejs }}",
+        },
+      {% endfor %}
+    ];
+    const toSwalConfig = (level, text) => {
+      const map = {
+        success: {icon: "success", confirmButtonColor: "#1e40af"},
+        error: {icon: "error", confirmButtonColor: "#d33"},
+        warning: {icon: "warning", confirmButtonColor: "#f59e0b"},
+        info: {icon: "info", confirmButtonColor: "#2563eb"},
+        debug: {icon: "info", confirmButtonColor: "#2563eb"},
+      };
+      const base = map[level] || map.info;
+      return Object.assign(
+        {
+          title: level.charAt(0).toUpperCase() + level.slice(1),
+          text,
+        },
+        base
+      );
+    };
+    let promise = Promise.resolve();
+    alerts.forEach(({level, text}) => {
+      promise = promise.then(() => Swal.fire(toSwalConfig(level, text)));
+    });
+  });
+</script>
+{% endif %}
 </body>
 </html>
