@@ -4,6 +4,8 @@ import os
 import requests
 from django.conf import settings
 from django.contrib import messages
+from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseNotAllowed
 from django.shortcuts import redirect, render
 
@@ -11,6 +13,7 @@ from .models import Sugerencia
 
 logger = logging.getLogger(__name__)
 CONTACT_SECTION = "/#contacto"
+User = get_user_model()
 
 
 def landing(request):
@@ -27,8 +30,33 @@ def acerca(request):
     return render(request, "acerca.html")
 
 
+@login_required(login_url="login")
 def perfil(request):
-    """Ficha resumida del perfil de usuario."""
+    """Ficha resumida del perfil de usuario con edicion basica."""
+    if request.method == "POST":
+        first_name = (request.POST.get("first_name") or "").strip()
+        last_name = (request.POST.get("last_name") or "").strip()
+        email = (request.POST.get("email") or "").strip()
+
+        if not (first_name and last_name and email):
+            messages.error(request, "Completa todos los campos obligatorios.")
+            return redirect("perfil")
+
+        if (
+            User.objects.filter(email__iexact=email)
+            .exclude(pk=request.user.pk)
+            .exists()
+        ):
+            messages.error(request, "Este correo ya esta registrado en otra cuenta.")
+            return redirect("perfil")
+
+        request.user.first_name = first_name
+        request.user.last_name = last_name
+        request.user.email = email
+        request.user.save(update_fields=["first_name", "last_name", "email"])
+        messages.success(request, "Actualizamos tu perfil.")
+        return redirect("perfil")
+
     return render(request, "perfil.html")
 
 

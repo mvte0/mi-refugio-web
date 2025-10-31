@@ -4,19 +4,21 @@
 <section class="py-5">
   <div class="container" style="max-width: 920px;">
     <div class="row g-4">
-      <!-- Resumen -->
       <div class="col-12 col-lg-4">
         <div class="card shadow-soft border-0 h-100">
           <div class="card-body p-4 text-center">
-            <img class="avatar mb-3" src="https://ui-avatars.com/api/?name={{ user.get_full_name|default:user.username|urlencode }}&background=1e40af&color=fff" alt="Avatar">
+            <img
+              class="avatar mb-3"
+              src="https://ui-avatars.com/api/?name={{ user.get_full_name|default:user.username|urlencode }}&background=1e40af&color=fff"
+              alt="Avatar"
+            >
             <h5 class="mb-1">{{ user.get_full_name|default:user.username }}</h5>
             <div class="text-secondary small">{{ user.email }}</div>
             <hr>
-            <a href="{% url 'password_change' %}" class="btn btn-outline-mr btn-sm">Cambiar contraseña</a>
+            <a href="{% url 'password_change' %}" class="btn btn-outline-mr btn-sm">Cambiar contrasena</a>
           </div>
         </div>
       </div>
-      <!-- Detalle / edición simple -->
       <div class="col-12 col-lg-8">
         <div class="card shadow-soft border-0 h-100">
           <div class="card-body p-4">
@@ -24,16 +26,16 @@
             <form method="post" action="{% url 'perfil' %}" class="row g-3">
               {% csrf_token %}
               <div class="col-md-6">
-                <label class="form-label">Nombre</label>
-                <input class="form-control" name="first_name" value="{{ user.first_name }}" required>
+                <label class="form-label" for="first_name">Nombre</label>
+                <input class="form-control" id="first_name" name="first_name" value="{{ user.first_name }}" required>
               </div>
               <div class="col-md-6">
-                <label class="form-label">Apellido</label>
-                <input class="form-control" name="last_name" value="{{ user.last_name }}" required>
+                <label class="form-label" for="last_name">Apellido</label>
+                <input class="form-control" id="last_name" name="last_name" value="{{ user.last_name }}" required>
               </div>
               <div class="col-12">
-                <label class="form-label">Correo</label>
-                <input type="email" class="form-control" value="{{ user.email }}" name="email" required>
+                <label class="form-label" for="email">Correo</label>
+                <input type="email" class="form-control" id="email" value="{{ user.email }}" name="email" required>
               </div>
               <div class="col-12 d-flex gap-2">
                 <button class="btn btn-mr">Guardar cambios</button>
@@ -41,7 +43,7 @@
               </div>
             </form>
             <p class="small text-muted mt-3 mb-0">
-              * Esta es una edición simple. Para cambios críticos, valida tu correo.
+              * Esta es una edicion simple. Para cambios criticos, valida tu correo.
             </p>
           </div>
         </div>
