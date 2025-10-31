@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseNotAllowed
 from django.shortcuts import redirect, render
 
-from .models import Sugerencia
+from .models import Cliente, Sugerencia
 
 logger = logging.getLogger(__name__)
 CONTACT_SECTION = "/#contacto"
@@ -33,10 +33,13 @@ def acerca(request):
 @login_required(login_url="login")
 def perfil(request):
     """Ficha resumida del perfil de usuario con edicion basica."""
+    cliente, _ = Cliente.objects.get_or_create(user=request.user)
+
     if request.method == "POST":
         first_name = (request.POST.get("first_name") or "").strip()
         last_name = (request.POST.get("last_name") or "").strip()
         email = (request.POST.get("email") or "").strip()
+        avatar = request.FILES.get("avatar")
 
         if not (first_name and last_name and email):
             messages.error(request, "Completa todos los campos obligatorios.")
@@ -54,10 +57,15 @@ def perfil(request):
         request.user.last_name = last_name
         request.user.email = email
         request.user.save(update_fields=["first_name", "last_name", "email"])
+
+        if avatar:
+            cliente.avatar = avatar
+            cliente.save(update_fields=["avatar"])
+
         messages.success(request, "Actualizamos tu perfil.")
         return redirect("perfil")
 
-    return render(request, "perfil.html")
+    return render(request, "perfil.html", {"cliente": cliente})
 
 
 def api_sugerencias(request):

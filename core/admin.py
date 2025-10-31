@@ -1,6 +1,8 @@
-# core/admin.py
 from django.contrib import admin
-from .models import Sugerencia, Cliente
+from django.utils.html import format_html
+
+from .models import Cliente, Sugerencia
+
 
 @admin.register(Sugerencia)
 class SugerenciaAdmin(admin.ModelAdmin):
@@ -9,13 +11,25 @@ class SugerenciaAdmin(admin.ModelAdmin):
     list_filter = ("creado",)
 
     def short_msg(self, obj):
-        s = obj.mensaje or ""
-        return (s[:60] + "…") if len(s) > 60 else s
+        message = obj.mensaje or ""
+        return (message[:60] + "...") if len(message) > 60 else message
+
     short_msg.short_description = "Mensaje"
 
 
 @admin.register(Cliente)
 class ClienteAdmin(admin.ModelAdmin):
-    list_display = ("id", "creado", "user", "rut")
+    list_display = ("id", "creado", "user", "rut", "avatar_preview")
     search_fields = ("user__username", "user__email", "rut")
     list_filter = ("creado",)
+
+    def avatar_preview(self, obj):
+        if not obj.avatar:
+            return "—"
+        return format_html(
+            '<img src="{}" alt="{}" style="height:48px;border-radius:50%;">',
+            obj.avatar.url,
+            obj.user.username,
+        )
+
+    avatar_preview.short_description = "Avatar"

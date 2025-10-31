@@ -7,11 +7,11 @@
       <div class="col-12 col-lg-4">
         <div class="card shadow-soft border-0 h-100">
           <div class="card-body p-4 text-center">
-            <img
-              class="avatar mb-3"
-              src="https://ui-avatars.com/api/?name={{ user.get_full_name|default:user.username|urlencode }}&background=1e40af&color=fff"
-              alt="Avatar"
-            >
+            {% if cliente.avatar %}
+            <img class="avatar mb-3 rounded-circle" src="{{ cliente.avatar.url }}" alt="Avatar de {{ user.get_full_name|default:user.username }}" style="width:140px;height:140px;object-fit:cover;">
+            {% else %}
+            <img class="avatar mb-3 rounded-circle" src="https://ui-avatars.com/api/?name={{ user.get_full_name|default:user.username|urlencode }}&background=1e40af&color=fff" alt="Avatar">
+            {% endif %}
             <h5 class="mb-1">{{ user.get_full_name|default:user.username }}</h5>
             <div class="text-secondary small">{{ user.email }}</div>
             <hr>
@@ -23,7 +23,7 @@
         <div class="card shadow-soft border-0 h-100">
           <div class="card-body p-4">
             <h2 class="h5 mb-3">Datos de la cuenta</h2>
-            <form method="post" action="{% url 'perfil' %}" class="row g-3">
+            <form method="post" action="{% url 'perfil' %}" class="row g-3" enctype="multipart/form-data">
               {% csrf_token %}
               <div class="col-md-6">
                 <label class="form-label" for="first_name">Nombre</label>
@@ -36,6 +36,11 @@
               <div class="col-12">
                 <label class="form-label" for="email">Correo</label>
                 <input type="email" class="form-control" id="email" value="{{ user.email }}" name="email" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="avatar">Foto de perfil</label>
+                <input type="file" class="form-control" id="avatar" name="avatar" accept="image/*">
+                <div class="form-text">Usa imágenes cuadradas menores a 2MB para un mejor resultado.</div>
               </div>
               <div class="col-12 d-flex gap-2">
                 <button class="btn btn-mr">Guardar cambios</button>
