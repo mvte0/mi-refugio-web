@@ -36,13 +36,13 @@ def perfil(request):
     cliente, _ = Cliente.objects.get_or_create(user=request.user)
 
     if request.method == "POST":
-        first_name = (request.POST.get("first_name") or "").strip()
-        last_name = (request.POST.get("last_name") or "").strip()
-        email = (request.POST.get("email") or "").strip()
+        first_name = (request.POST.get("first_name") or request.user.first_name or "").strip()
+        last_name = (request.POST.get("last_name") or request.user.last_name or "").strip()
+        email = (request.POST.get("email") or request.user.email or "").strip()
         avatar = request.FILES.get("avatar")
 
-        if not (first_name and last_name and email):
-            messages.error(request, "Completa todos los campos obligatorios.")
+        if not email:
+            messages.error(request, "Ingresa un correo valido.")
             return redirect("perfil")
 
         if (
