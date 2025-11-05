@@ -1,0 +1,549 @@
+[
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$pDOJUTMzkAAwhZ3bePzq17$EDsu03TSJLMUWBRJiNxh1EofYztcSjEyt1vsmRfRSjY=",
+    "last_login": "2025-11-03T19:23:32.637Z",
+    "is_superuser": true,
+    "username": "admin_refugiocl",
+    "first_name": "Mi Refugio",
+    "last_name": "Chile",
+    "email": "mirefugio.chile@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-10-31T14:01:09Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$jMiMtiMpNhQJBTG3fbf624$OHMSSu2AjuwG2U1FvRXNgS1t3l9WS8eoaItLfupZw60=",
+    "last_login": "2025-10-31T15:11:31.063Z",
+    "is_superuser": false,
+    "username": "Carolina",
+    "first_name": "",
+    "last_name": "",
+    "email": "anette.mancilla.a@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-31T15:11:29.327Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$IdVEIIhuYTVfFCcxfQVIeX$C30SJ3ZEtuJhbB6NkpUF6dKxvA8UljwMMcYz58IsVZE=",
+    "last_login": "2025-10-31T19:12:39.443Z",
+    "is_superuser": false,
+    "username": "mateofn",
+    "first_name": "Mateo",
+    "last_name": "Flores",
+    "email": "mateofn.20@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-31T15:16:33Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$kBURphGOSkgXdEFWjzcJTU$mZA96HzVk4bPNQb8zhvE5Um4fPO668XehoFsPMfEPPw=",
+    "last_login": "2025-10-31T16:08:04.805Z",
+    "is_superuser": false,
+    "username": "luis",
+    "first_name": "",
+    "last_name": "",
+    "email": "lfloresz69@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-31T16:08:03.633Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$NWCvM3XHdEk7sKRp6YQ9lH$Ah6uM8kxmA8FiDTPfNARHFl98AyEqdlpKD7YwGfiewY=",
+    "last_login": "2025-10-31T20:42:24.399Z",
+    "is_superuser": false,
+    "username": "nachonto21",
+    "first_name": "",
+    "last_name": "",
+    "email": "nacho.m.3588@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-31T20:42:22.731Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$TcmP33hJ09TC1YDUQ6ayqj$tYfN2hS87UhysK5Pk0P1XQZrzdIAo0+o75E5aP3tCWM=",
+    "last_login": "2025-11-04T01:32:55.407Z",
+    "is_superuser": false,
+    "username": "reinajaponesa",
+    "first_name": "María Jose",
+    "last_name": "Pinto",
+    "email": "majo.pintopalma@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-01T01:28:48.274Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0paavdq7ukh069pelgd6kjoziii99ell",
+  "fields": {
+    "session_data": ".eJxVjL0OwyAQg9-FuUL8HAE6ds8zoOMgJW1FpJBMVd-9RMrQLpblz_abBdy3EvaW1zAndmWKXX6ziPTM9QDpgfW-cFrqts6RHxV-0sbHJeXX7ez-HRRspa8BB6WcTUYnbzx4FF6S1JOFLDKAJqDuvQdw0SZNLko1YYxmsF2EZp8vwSg3Tg:1vEuWu:N2h1pg7Ifrn92-B-dlEC7cjQ4AwLr3l9JgrOiWFVgO4",
+    "expire_date": "2025-11-14T19:11:20.055Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1b6lwkwzah3zatrph8bpgwwjepl36f7t",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSG-C6RM7zOghUXBSYQlY1dR7h4suUi60cx782YR963GvZc1zsSuzLPLb5cwP0s7Bnpguy88L21b58QPhJ9r59NC5XU72b-Dir0OOyuhTbbaeodeSiGycgiQJICi4EewloIxSNpr7QhcUiAkuYIUhsc-X665NrM:1vEvx2:qRVt_ORYirwsf7hstzKwrp3WrmP_278jBZW6IE512Xc",
+    "expire_date": "2025-11-14T20:42:24.495Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5a4nav4x04i9cw4m08d9iw9aq22nf7x6",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAURO_C2hAKv6V06d4zkA_8WtRAA22iMd7dNulCN5PJvJl5M4vrMtm1UrExsIFJdvrNHPo7pR2EG6Zr5j6npUTH9wo_aOWXHOhxPrp_BxPWaVsDdlL2OrQqmNaAQWEa36hRAwkCUB785o0B6J0OyveukSM613Z6E6H200q1xpwsPedYXmwQny9dlj6L:1vEuKr:C592TWOyD_e7L_r3gYNJfEYq53mHEN4jL0bn4BJu-uU",
+    "expire_date": "2025-11-14T18:58:53.891Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6d0s36h1fj816rbjtdwztsahg70xq1m1",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP_C2RAKLLQevfsGAstiUQOmtInG-HdD0oNeZybzZs5v6-y2RovLkR0ZsMMvCx5vVLqIV18ulWMt65ID7wnfbePnGul-2tu_wezb3LfaiKSSl9qAVSkGDzgaTX4QNgSYNNqAKAcMKWoylJQXkkYbAbRQgH3aqLVci6PnIy8vdpQwSSHE5wsj4kDK:1vEuYB:tqXTMDXvr3RZAf7TUXdVZybg_5XCQYv-fL0TPlOQiqM",
+    "expire_date": "2025-11-30T19:12:39.492Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8n8nd5iojd7ubxg272yxuirvx6cbe6a9",
+  "fields": {
+    "session_data": ".eJxVjE0OwiAYBe_C2hBb_l267xnIAz6kaiAp7cp4d23ShW7fzLwX89jW4rdOi58TuzDJTr9bQHxQ3UG6o94aj62uyxz4rvCDdj61RM_r4f4dFPTyreGCxeiQLQkTMwwZCW2tUqMwkvTglDWZBghJAhLJQLssA51DoGw1e38A9Eg4hA:1vEqmp:ZVr-zUgOr4ICY3TF71VC3qYLB74RScLtJJXH9SDgFFQ",
+    "expire_date": "2025-11-14T15:11:31.160Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "91qxxcv3srblco7u89mspttrpc3qvuv6",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hBafrVL956BPB4Pixow0CYa490NSRe6nZnMmznY1sVtjapLgc1Ms8Mv84A3yl2EK-RL4VjyWpPnPeG7bfxcAt1Pe_s3WKAtfauMiDLCqIy2MgYPGiejCAZhvddHhdYjjgP6GBQZihLESJMNWishNfZpo9ZSyY6ej1RfbBafL6OfP5g:1vEuQ3:5Fyh2HvO8UHAXbi2X2O-ZUgEch0eJj_3LothE84toxM",
+    "expire_date": "2025-11-14T19:04:15.918Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "b71qyprxt7pnys5jbf9k40u0ab75urbn",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHDq0iX7v0GMsBoUQMG2kRj_Hdt0oVu7zn3vJjHZZ780qn5nNjIHNv9bgHjlcoK0gXLufJYy9xy4KvCN9r5sSa6HTb3LzBhn77voIUmBzhYhwkCAplTsGjB7Q2BJIlpiGpALZJLaIQSEIOSyloNIC2u0U6951o8Pe65PdkojZMA8P4AB9E_8w:1vG5up:DkZAkulGHoV_ScWZm8_bADstT3bXGlg7uO4WpSor9Cc",
+    "expire_date": "2025-12-04T01:32:55.457Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "e6hk1p6v57sb7v3gpv432tda3eooe4wf",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyFCgYJH734DWXa3UjWQlPZk_Hdp0oPeJjPvzVtE2NYct8ZLnElchBOn3y4BPrnsAz2g3KvEWtZlTnJH5LE2eavEr-vB_h1kaLnbxnoHjIMnDAmYu-nB92AoGGVGpQaY8MxgAgIpDpPGRFaTdjaNaMTnCyVgOX8:1vErP7:DRKeFuSMyzi2wiPajY7FdUHBcCW21lC7pQACSMuVjyk",
+    "expire_date": "2025-11-14T15:51:05.888Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gm5bvosdr89o59j5p5ykrqygzookcb9w",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAURO_C2hAKv6V06d4zkA_8WtRAA22iMd7dNulCN5PJvJl5M4vrMtm1UrExsIFJdvrNHPo7pR2EG6Zr5j6npUTH9wo_aOWXHOhxPrp_BxPWaVsDdlL2OrQqmNaAQWEa36hRAwkCUB785o0B6J0OyveukSM613Z6E6H200q1xpwsPedYXmwQny9dlj6L:1vFZFe:dpK58kWrNoYgybMrZTT53rvBhRekap9wRQ2OlusiePA",
+    "expire_date": "2025-11-16T14:40:14.500Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ihezm72gme754tg74n2ly6yys248ygxv",
+  "fields": {
+    "session_data": ".eJxVjL0OwyAQg9-FuUL8HAE6ds8zoOMgJW1FpJBMVd-9RMrQLpblz_abBdy3EvaW1zAndmWKXX6ziPTM9QDpgfW-cFrqts6RHxV-0sbHJeXX7ez-HRRspa8BB6WcTUYnbzx4FF6S1JOFLDKAJqDuvQdw0SZNLko1YYxmsF2EZp8vwSg3Tg:1vG09M:-AJWf0eYW9Yz4j7pvPruXmssOebgBApCGx4Ypv2cBls",
+    "expire_date": "2025-11-17T19:23:32.736Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mpebr9w152hiz1shguaw09su85ske3sj",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAURO_C2hAKv6V06d4zkA_8WtRAA22iMd7dNulCN5PJvJl5M4vrMtm1UrExsIFJdvrNHPo7pR2EG6Zr5j6npUTH9wo_aOWXHOhxPrp_BxPWaVsDdlL2OrQqmNaAQWEa36hRAwkCUB785o0B6J0OyveukSM613Z6E6H200q1xpwsPedYXmwQny9dlj6L:1vFDrz:aWaw8WsiWLfAc3lgs1Bx-wErEJdVtOhZeQJ3kKeELvg",
+    "expire_date": "2025-11-15T15:50:23.570Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "r8f91lw8um2z8qoox7vief8agdhtyigm",
+  "fields": {
+    "session_data": ".eJxVjDEOwjAMRe-SGUVt0sQOIztniOzaogWUSE07Ie4OlTrA-t97_2UybeuUt6ZLnsWcDZjT78Y0PrTsQO5UbtWOtazLzHZX7EGbvVbR5-Vw_w4matO3DhERgFiiE-6CR-KEwoNKVEF1A3TcQ_B9EqQYUpBRgUKP4DsEdub9AeWpN5I:1vErfY:Ab4F8L5cqMZa75gyuw-Q8od7auSjMPzl52Wf5-67z-M",
+    "expire_date": "2025-11-14T16:08:04.903Z"
+  }
+},
+{
+  "model": "core.sugerencia",
+  "pk": 1,
+  "fields": {
+    "creado": "2025-10-31T15:31:00.402Z",
+    "nombre": "MATEO IGNACIO FLORES NUÑEZ",
+    "email": "mateofn.20@gmail.com",
+    "mensaje": "[PREGUNTA] Hola esto es una pruebaaaaaaa"
+  }
+},
+{
+  "model": "core.sugerencia",
+  "pk": 2,
+  "fields": {
+    "creado": "2025-10-31T15:39:21.748Z",
+    "nombre": "MATEO IGNACIO FLORES NUÑEZ",
+    "email": "mateofn.20@gmail.com",
+    "mensaje": "[SUGERENCIA] Probando alerta"
+  }
+},
+{
+  "model": "core.sugerencia",
+  "pk": 3,
+  "fields": {
+    "creado": "2025-11-01T01:33:18.570Z",
+    "nombre": "Maria Jose Pinto",
+    "email": "majo.pintopalma@gmail.com",
+    "mensaje": "[PREGUNTA] Hola, me gustaría saber que tipo de ejercicios de mindfullnes tendrá la app y cuándo va a estar disponible. Gracias"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 3,
+  "fields": {
+    "user": 4,
+    "rut": "12909249-1",
+    "avatar": "",
+    "creado": "2025-10-31T15:11:30.822Z"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 4,
+  "fields": {
+    "user": 5,
+    "rut": "21150833-7",
+    "avatar": "",
+    "creado": "2025-10-31T15:16:34.756Z"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 6,
+  "fields": {
+    "user": 7,
+    "rut": "10702629-0",
+    "avatar": "",
+    "creado": "2025-10-31T16:08:04.564Z"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 7,
+  "fields": {
+    "user": 2,
+    "rut": null,
+    "avatar": "avatars/pngimg.com_-_simpsons_PNG42.png",
+    "creado": "2025-10-31T17:16:00.869Z"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 8,
+  "fields": {
+    "user": 8,
+    "rut": "21090419-0",
+    "avatar": "",
+    "creado": "2025-10-31T20:42:24.163Z"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 9,
+  "fields": {
+    "user": 9,
+    "rut": "20793991-9",
+    "avatar": "avatars/IMG_1124.jpeg",
+    "creado": "2025-11-01T01:28:49.500Z"
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 1,
+  "fields": {
+    "cliente": null,
+    "created_at": "2025-10-31T13:53:47.200Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "mateofn.20@gmail.com",
+    "message": "holaaaaaaaaaaaaaaaaaa",
+    "buy_order": "MR-20251031135347-32653e",
+    "session_id": "e092321999d5",
+    "token_ws": "01ab6085c0c2648d86b7ecf183aa32677d427e04267a2d47110010f9fa0e8e1c",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab6085c0c2648d86b7ecf183aa32677d427e04267a2d47110010f9fa0e8e1c"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 2,
+  "fields": {
+    "cliente": null,
+    "created_at": "2025-10-31T14:48:54.664Z",
+    "amount": "5000.00",
+    "name": "Mateo",
+    "email": "mateofn.20@gmail.com",
+    "message": "Holaaaaaa",
+    "buy_order": "MR-20251031144854-3dcec1",
+    "session_id": "158a6f976ce4",
+    "token_ws": "01abd7118e706d6e465a9831ba0fa10b432f0b482f7faef52457ea5c1a52921f",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01abd7118e706d6e465a9831ba0fa10b432f0b482f7faef52457ea5c1a52921f"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 3,
+  "fields": {
+    "cliente": 3,
+    "created_at": "2025-10-31T15:11:47.776Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251031151147-451592",
+    "session_id": "caa512466255",
+    "token_ws": "01ab1a3cf54e3ecf4df937a182394918a38a99953dd8f6c1654147f9be35cd9c",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab1a3cf54e3ecf4df937a182394918a38a99953dd8f6c1654147f9be35cd9c"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 4,
+  "fields": {
+    "cliente": 4,
+    "created_at": "2025-10-31T15:23:46.995Z",
+    "amount": "500.00",
+    "name": "Mateo",
+    "email": "mateofn.20@gmail.com",
+    "message": "Holaaaa",
+    "buy_order": "MR-20251031152346-897348",
+    "session_id": "951640a1b65b",
+    "token_ws": "01ab3c97fa5c896f0162f6e07d89651778ad17d482e22c7908699d35ccea418d",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab3c97fa5c896f0162f6e07d89651778ad17d482e22c7908699d35ccea418d"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 5,
+  "fields": {
+    "cliente": 6,
+    "created_at": "2025-10-31T16:08:32.263Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251031160832-eda590",
+    "session_id": "e8d8ae09ff78",
+    "token_ws": "01abedcba9327313f7cd2b68a3e2cf7769267163ef1a952103f6a3ceecf877e3",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01abedcba9327313f7cd2b68a3e2cf7769267163ef1a952103f6a3ceecf877e3"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 6,
+  "fields": {
+    "cliente": 8,
+    "created_at": "2025-10-31T20:42:54.041Z",
+    "amount": "12000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251031204253-f2298c",
+    "session_id": "787e825645f6",
+    "token_ws": "01abe5290776756b44df6eb79e1d58b9762d9be771b57dcda2e6cb7f214c9178",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01abe5290776756b44df6eb79e1d58b9762d9be771b57dcda2e6cb7f214c9178"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 7,
+  "fields": {
+    "cliente": 9,
+    "created_at": "2025-11-01T01:33:38.930Z",
+    "amount": "500.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251101013338-d11e4e",
+    "session_id": "6b0372b3df24",
+    "token_ws": "01ab0ee3a568dd76e09ec27429afb0dabc9db78286120b5a1be87325333b328e",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab0ee3a568dd76e09ec27429afb0dabc9db78286120b5a1be87325333b328e"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 8,
+  "fields": {
+    "cliente": 7,
+    "created_at": "2025-11-01T15:50:51.261Z",
+    "amount": "500.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251101155051-9c92de",
+    "session_id": "11de6840ed3e",
+    "token_ws": "01ab4e5eece7360d14ea4561354939dd4eef0035b257645add744ebcff25a791",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab4e5eece7360d14ea4561354939dd4eef0035b257645add744ebcff25a791"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 9,
+  "fields": {
+    "cliente": 8,
+    "created_at": "2025-11-01T23:28:26.023Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251101232825-a806f7",
+    "session_id": "a0fb3f1939fe",
+    "token_ws": "01ab7d9007b07a0775bef35d278dc756cedabb03151b776c8313f7ca954f2135",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab7d9007b07a0775bef35d278dc756cedabb03151b776c8313f7ca954f2135"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 10,
+  "fields": {
+    "cliente": 8,
+    "created_at": "2025-11-01T23:54:42.010Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251101235441-40099a",
+    "session_id": "a638a1776ad1",
+    "token_ws": "01ab176760b393c5545cb4375802755c5c178cb7b86bd7483cad9a612ed9064b",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab176760b393c5545cb4375802755c5c178cb7b86bd7483cad9a612ed9064b"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 11,
+  "fields": {
+    "cliente": 7,
+    "created_at": "2025-11-02T14:42:10.369Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251102144210-6f542c",
+    "session_id": "17f1f061364a",
+    "token_ws": "01ab3fe7b1616ab5e994349a89e2b50230f0dbeb4c2e060ff400f79707b1a9b8",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab3fe7b1616ab5e994349a89e2b50230f0dbeb4c2e060ff400f79707b1a9b8"
+    }
+  }
+}
+]

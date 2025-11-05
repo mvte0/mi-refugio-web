@@ -17,7 +17,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))  # lee .env si existe
 # --------------------------------------------------------------------------------------
 # Core
 # --------------------------------------------------------------------------------------
-DEBUG = env.bool("DEBUG", default=True)
+DEBUG = env.bool("DEBUG", default=False) == "True"
 SECRET_KEY = env(
     "SECRET_KEY",
     default="django-insecure-uoer87vu*-unues@)*1l#jcn*wete2kf%pv^t-f8uel#e35^2l",
@@ -108,8 +108,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": env("DB_NAME", default="mirefugio"),
         # Usa SIEMPRE el usuario de app (no el maestro):
-        "USER": env("DB_USER", default="role_web_rw"),
-        "PASSWORD": env("DB_PASS", default=""),
+        "USER": env("DB_USER", default="mirefugio_owner"),
+        "PASSWORD": env("DB_PASS", default="Mirefugio2025!"),
         "HOST": env(
             "DB_HOST",
             default="mirefugio.c9ie2ckqg3rt.us-east-2.rds.amazonaws.com",

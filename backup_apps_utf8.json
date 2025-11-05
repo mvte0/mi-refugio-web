@@ -1,0 +1,777 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add sugerencia",
+    "content_type": 7,
+    "codename": "add_sugerencia"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change sugerencia",
+    "content_type": 7,
+    "codename": "change_sugerencia"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete sugerencia",
+    "content_type": 7,
+    "codename": "delete_sugerencia"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view sugerencia",
+    "content_type": 7,
+    "codename": "view_sugerencia"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add cliente",
+    "content_type": 8,
+    "codename": "add_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change cliente",
+    "content_type": 8,
+    "codename": "change_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete cliente",
+    "content_type": 8,
+    "codename": "delete_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view cliente",
+    "content_type": 8,
+    "codename": "view_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add donation",
+    "content_type": 9,
+    "codename": "add_donation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change donation",
+    "content_type": 9,
+    "codename": "change_donation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete donation",
+    "content_type": 9,
+    "codename": "delete_donation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view donation",
+    "content_type": 9,
+    "codename": "view_donation"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$pDOJUTMzkAAwhZ3bePzq17$EDsu03TSJLMUWBRJiNxh1EofYztcSjEyt1vsmRfRSjY=",
+    "last_login": "2025-11-03T19:23:32.637Z",
+    "is_superuser": true,
+    "username": "admin_refugiocl",
+    "first_name": "Mi Refugio",
+    "last_name": "Chile",
+    "email": "mirefugio.chile@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-10-31T14:01:09Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$jMiMtiMpNhQJBTG3fbf624$OHMSSu2AjuwG2U1FvRXNgS1t3l9WS8eoaItLfupZw60=",
+    "last_login": "2025-10-31T15:11:31.063Z",
+    "is_superuser": false,
+    "username": "Carolina",
+    "first_name": "",
+    "last_name": "",
+    "email": "anette.mancilla.a@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-31T15:11:29.327Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$IdVEIIhuYTVfFCcxfQVIeX$C30SJ3ZEtuJhbB6NkpUF6dKxvA8UljwMMcYz58IsVZE=",
+    "last_login": "2025-10-31T19:12:39.443Z",
+    "is_superuser": false,
+    "username": "mateofn",
+    "first_name": "Mateo",
+    "last_name": "Flores",
+    "email": "mateofn.20@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-31T15:16:33Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$kBURphGOSkgXdEFWjzcJTU$mZA96HzVk4bPNQb8zhvE5Um4fPO668XehoFsPMfEPPw=",
+    "last_login": "2025-10-31T16:08:04.805Z",
+    "is_superuser": false,
+    "username": "luis",
+    "first_name": "",
+    "last_name": "",
+    "email": "lfloresz69@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-31T16:08:03.633Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$NWCvM3XHdEk7sKRp6YQ9lH$Ah6uM8kxmA8FiDTPfNARHFl98AyEqdlpKD7YwGfiewY=",
+    "last_login": "2025-10-31T20:42:24.399Z",
+    "is_superuser": false,
+    "username": "nachonto21",
+    "first_name": "",
+    "last_name": "",
+    "email": "nacho.m.3588@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-31T20:42:22.731Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$TcmP33hJ09TC1YDUQ6ayqj$tYfN2hS87UhysK5Pk0P1XQZrzdIAo0+o75E5aP3tCWM=",
+    "last_login": "2025-11-04T01:32:55.407Z",
+    "is_superuser": false,
+    "username": "reinajaponesa",
+    "first_name": "MarÃƒÆ’Ã‚Â­a Jose",
+    "last_name": "Pinto",
+    "email": "majo.pintopalma@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-01T01:28:48.274Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.sugerencia",
+  "pk": 1,
+  "fields": {
+    "creado": "2025-10-31T15:31:00.402Z",
+    "nombre": "MATEO IGNACIO FLORES NUÃƒÆ’Ã¢â‚¬ËœEZ",
+    "email": "mateofn.20@gmail.com",
+    "mensaje": "[PREGUNTA] Hola esto es una pruebaaaaaaa"
+  }
+},
+{
+  "model": "core.sugerencia",
+  "pk": 2,
+  "fields": {
+    "creado": "2025-10-31T15:39:21.748Z",
+    "nombre": "MATEO IGNACIO FLORES NUÃƒÆ’Ã¢â‚¬ËœEZ",
+    "email": "mateofn.20@gmail.com",
+    "mensaje": "[SUGERENCIA] Probando alerta"
+  }
+},
+{
+  "model": "core.sugerencia",
+  "pk": 3,
+  "fields": {
+    "creado": "2025-11-01T01:33:18.570Z",
+    "nombre": "Maria Jose Pinto",
+    "email": "majo.pintopalma@gmail.com",
+    "mensaje": "[PREGUNTA] Hola, me gustarÃƒÆ’Ã‚Â­a saber que tipo de ejercicios de mindfullnes tendrÃƒÆ’Ã‚Â¡ la app y cuÃƒÆ’Ã‚Â¡ndo va a estar disponible. Gracias"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 3,
+  "fields": {
+    "user": 4,
+    "rut": "12909249-1",
+    "avatar": "",
+    "creado": "2025-10-31T15:11:30.822Z"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 4,
+  "fields": {
+    "user": 5,
+    "rut": "21150833-7",
+    "avatar": "",
+    "creado": "2025-10-31T15:16:34.756Z"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 6,
+  "fields": {
+    "user": 7,
+    "rut": "10702629-0",
+    "avatar": "",
+    "creado": "2025-10-31T16:08:04.564Z"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 7,
+  "fields": {
+    "user": 2,
+    "rut": null,
+    "avatar": "avatars/pngimg.com_-_simpsons_PNG42.png",
+    "creado": "2025-10-31T17:16:00.869Z"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 8,
+  "fields": {
+    "user": 8,
+    "rut": "21090419-0",
+    "avatar": "",
+    "creado": "2025-10-31T20:42:24.163Z"
+  }
+},
+{
+  "model": "core.cliente",
+  "pk": 9,
+  "fields": {
+    "user": 9,
+    "rut": "20793991-9",
+    "avatar": "avatars/IMG_1124.jpeg",
+    "creado": "2025-11-01T01:28:49.500Z"
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 1,
+  "fields": {
+    "cliente": null,
+    "created_at": "2025-10-31T13:53:47.200Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "mateofn.20@gmail.com",
+    "message": "holaaaaaaaaaaaaaaaaaa",
+    "buy_order": "MR-20251031135347-32653e",
+    "session_id": "e092321999d5",
+    "token_ws": "01ab6085c0c2648d86b7ecf183aa32677d427e04267a2d47110010f9fa0e8e1c",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab6085c0c2648d86b7ecf183aa32677d427e04267a2d47110010f9fa0e8e1c"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 2,
+  "fields": {
+    "cliente": null,
+    "created_at": "2025-10-31T14:48:54.664Z",
+    "amount": "5000.00",
+    "name": "Mateo",
+    "email": "mateofn.20@gmail.com",
+    "message": "Holaaaaaa",
+    "buy_order": "MR-20251031144854-3dcec1",
+    "session_id": "158a6f976ce4",
+    "token_ws": "01abd7118e706d6e465a9831ba0fa10b432f0b482f7faef52457ea5c1a52921f",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01abd7118e706d6e465a9831ba0fa10b432f0b482f7faef52457ea5c1a52921f"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 3,
+  "fields": {
+    "cliente": 3,
+    "created_at": "2025-10-31T15:11:47.776Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251031151147-451592",
+    "session_id": "caa512466255",
+    "token_ws": "01ab1a3cf54e3ecf4df937a182394918a38a99953dd8f6c1654147f9be35cd9c",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab1a3cf54e3ecf4df937a182394918a38a99953dd8f6c1654147f9be35cd9c"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 4,
+  "fields": {
+    "cliente": 4,
+    "created_at": "2025-10-31T15:23:46.995Z",
+    "amount": "500.00",
+    "name": "Mateo",
+    "email": "mateofn.20@gmail.com",
+    "message": "Holaaaa",
+    "buy_order": "MR-20251031152346-897348",
+    "session_id": "951640a1b65b",
+    "token_ws": "01ab3c97fa5c896f0162f6e07d89651778ad17d482e22c7908699d35ccea418d",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab3c97fa5c896f0162f6e07d89651778ad17d482e22c7908699d35ccea418d"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 5,
+  "fields": {
+    "cliente": 6,
+    "created_at": "2025-10-31T16:08:32.263Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251031160832-eda590",
+    "session_id": "e8d8ae09ff78",
+    "token_ws": "01abedcba9327313f7cd2b68a3e2cf7769267163ef1a952103f6a3ceecf877e3",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01abedcba9327313f7cd2b68a3e2cf7769267163ef1a952103f6a3ceecf877e3"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 6,
+  "fields": {
+    "cliente": 8,
+    "created_at": "2025-10-31T20:42:54.041Z",
+    "amount": "12000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251031204253-f2298c",
+    "session_id": "787e825645f6",
+    "token_ws": "01abe5290776756b44df6eb79e1d58b9762d9be771b57dcda2e6cb7f214c9178",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01abe5290776756b44df6eb79e1d58b9762d9be771b57dcda2e6cb7f214c9178"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 7,
+  "fields": {
+    "cliente": 9,
+    "created_at": "2025-11-01T01:33:38.930Z",
+    "amount": "500.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251101013338-d11e4e",
+    "session_id": "6b0372b3df24",
+    "token_ws": "01ab0ee3a568dd76e09ec27429afb0dabc9db78286120b5a1be87325333b328e",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab0ee3a568dd76e09ec27429afb0dabc9db78286120b5a1be87325333b328e"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 8,
+  "fields": {
+    "cliente": 7,
+    "created_at": "2025-11-01T15:50:51.261Z",
+    "amount": "500.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251101155051-9c92de",
+    "session_id": "11de6840ed3e",
+    "token_ws": "01ab4e5eece7360d14ea4561354939dd4eef0035b257645add744ebcff25a791",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab4e5eece7360d14ea4561354939dd4eef0035b257645add744ebcff25a791"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 9,
+  "fields": {
+    "cliente": 8,
+    "created_at": "2025-11-01T23:28:26.023Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251101232825-a806f7",
+    "session_id": "a0fb3f1939fe",
+    "token_ws": "01ab7d9007b07a0775bef35d278dc756cedabb03151b776c8313f7ca954f2135",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab7d9007b07a0775bef35d278dc756cedabb03151b776c8313f7ca954f2135"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 10,
+  "fields": {
+    "cliente": 8,
+    "created_at": "2025-11-01T23:54:42.010Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251101235441-40099a",
+    "session_id": "a638a1776ad1",
+    "token_ws": "01ab176760b393c5545cb4375802755c5c178cb7b86bd7483cad9a612ed9064b",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab176760b393c5545cb4375802755c5c178cb7b86bd7483cad9a612ed9064b"
+    }
+  }
+},
+{
+  "model": "payments.donation",
+  "pk": 11,
+  "fields": {
+    "cliente": 7,
+    "created_at": "2025-11-02T14:42:10.369Z",
+    "amount": "5000.00",
+    "name": "",
+    "email": "",
+    "message": "",
+    "buy_order": "MR-20251102144210-6f542c",
+    "session_id": "17f1f061364a",
+    "token_ws": "01ab3fe7b1616ab5e994349a89e2b50230f0dbeb4c2e060ff400f79707b1a9b8",
+    "status": "initialized",
+    "authorization_code": "",
+    "payment_type": "",
+    "installments_number": null,
+    "response_raw": {
+      "url": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "token": "01ab3fe7b1616ab5e994349a89e2b50230f0dbeb4c2e060ff400f79707b1a9b8"
+    }
+  }
+}
+]
